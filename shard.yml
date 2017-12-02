@@ -1,0 +1,13 @@
+name: tucana
+version: 0.0.1
+
+authors:
+  - Yacobus Reinhart <yacobus.reinhart@gmail.com>
+
+targets:
+  tucana:
+    main: src/tucana.cr
+
+crystal: 0.23.1
+
+license: MIT
