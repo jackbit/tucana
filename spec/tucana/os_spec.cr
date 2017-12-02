@@ -23,7 +23,7 @@ describe Tucana::OS do
 
       context "have not sw_vers" do
         it "should return value of uname -a" do
-          Tucana::OS.sw_vers("/dev/unknown").should eq `uname -a`
+          Tucana::OS.sw_vers("/dev/unknown").should eq `uname -a`.strip
         end
       end
     end
@@ -45,7 +45,7 @@ describe Tucana::OS do
 
       context "without /etc/lsb-release" do
         it "should return value of uname -a" do
-          Tucana::OS.linux_distrib.should eq `uname -a`
+          Tucana::OS.linux_distrib.should eq `uname -a`.strip
         end
       end
     end

@@ -1,9 +1,9 @@
 module Tucana
   class OS
     def self.name
-      if linux?
+      if self.linux?
         self.linux_distrib
-      elsif macos?
+      elsif self.macos?
         self.sw_vers
       else
         "Unknown"
@@ -22,7 +22,7 @@ module Tucana
         end
         [sw_info["ProductName"].gsub(/\"/, ""), sw_info["ProductVersion"]].join(" ")
       else
-        `uname -a`
+        `uname -a`.strip
       end
     end
 
@@ -38,7 +38,7 @@ module Tucana
         end
         [lsb_info["DISTRIB_DESCRIPTION"].gsub(/\"/, ""), lsb_info["DISTRIB_CODENAME"]].join(" ")
       else
-        `uname -a`
+        `uname -a`.strip
       end
     end
 
@@ -47,11 +47,11 @@ module Tucana
     end
 
     def self.macos?
-      self.type.downcase == "darwin"
+      self.type.downcase === "darwin"
     end
 
     def self.type
-      `uname -s`
+      `uname -s`.strip
     end
   end
 end
