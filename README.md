@@ -51,6 +51,12 @@ memory.free_percent
 memory.cached_percent
 => 25
 ```
+##### TESTING
+```
+spec/run
+# or
+spec/run spec/path/file.cr
+```
 
 ##### GOAL
 
