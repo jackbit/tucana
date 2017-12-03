@@ -1,3 +1,4 @@
+![tucana](https://www.wpclipart.com/space/constellations/charts/charts_5/tucana.png)
 
 ## {WIP} Tucana
 
